@@ -28,7 +28,7 @@ def dibujar(r, R, l):
     pygame.init()
     # Crea una ventana de ANCHO x ALTO
     ventana = pygame.display.set_mode((ANCHO, ALTO))  # Crea la ventana donde dibujará
-    reloj = pygame.time.Clock( 20)  # Para limitar los fps
+    reloj = pygame.time.Clock()  # Para limitar los fps
     termina = False  # Bandera para saber si termina la ejecución, iniciamos suponiendo que no
 
     while not termina:  # Ciclo principal, MIENTRAS la variable termina sea False, el ciclo se repite automáticamente
