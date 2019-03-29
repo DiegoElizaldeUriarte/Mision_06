@@ -49,8 +49,8 @@ def dibujar(r, R, l):
         periodo = r // m.gcd(r, R)
         for angulo in range(0, (360+1)*periodo*2, 1):
             a = m.radians(angulo)    # Convierte a radianes
-            x = int(R * (((1 - k) * m.cos(a)) + ((l * k) * m.cos(((l - k) / k) * a))))
-            y = int(R * (((1 - k) * m.sin(a)) - ((l * k) * m.sin(((l - k) / k) * a))))
+            x = int(R * (((1 - k) * m.cos(a)) + l * (k* (m.cos(((1 - k) / k) * a)))))
+            y = int(R * (((1 - k) * m.sin(a)) - l * (k* (m.sin(((1 - k) / k) * a)))))
             pygame.draw.circle(ventana, colorAleatorio, (x + ANCHO // 2, ALTO // 2 - y), 1)
 
         pygame.display.flip()  # Actualiza trazos (Si no llamas a esta función, no se dibuja)
